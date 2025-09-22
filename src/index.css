@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: 'Baloo 2', cursive;
+  }
+}
+
+@layer components {
+  .memphis-pattern {
+    background-image: 
+      radial-gradient(circle at 20% 80%, #FF6F61 2px, transparent 2px),
+      radial-gradient(circle at 80% 20%, #6B5B95 2px, transparent 2px),
+      radial-gradient(circle at 40% 40%, #88B04B 1px, transparent 1px);
+    background-size: 50px 50px, 60px 60px, 30px 30px;
+  }
+  
+  .memphis-zigzag {
+    background-image: 
+      linear-gradient(45deg, #FFD23F 25%, transparent 25%),
+      linear-gradient(-45deg, #FFD23F 25%, transparent 25%),
+      linear-gradient(45deg, transparent 75%, #FF8C42 75%),
+      linear-gradient(-45deg, transparent 75%, #FF8C42 75%);
+    background-size: 20px 20px;
+    background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+  }
+  
+  .memphis-card {
+    @apply bg-white rounded-3xl shadow-2xl border-4 border-black transform rotate-1 hover:rotate-0 transition-all duration-300;
+  }
+  
+  .memphis-button {
+    @apply bg-memphis-coral text-white font-bold py-3 px-6 rounded-full border-4 border-black shadow-lg transform hover:scale-105 transition-all duration-200 font-fredoka;
+  }
+  
+  .memphis-badge {
+    @apply bg-memphis-yellow text-black px-4 py-2 rounded-full border-2 border-black font-bold text-sm transform -rotate-2;
+  }
+}
